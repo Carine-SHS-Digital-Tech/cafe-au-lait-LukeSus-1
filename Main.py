@@ -30,5 +30,14 @@ while more_orders:
     next_item = input("Next item?: (Y/N)")
     if next_item == "N":
         more_orders = False
+dining = input("Dine In or Take Away: (D/T")
+print("          Receipt")
+print("............................")
 print(Order_item)
-print(f"${Price_item}")
+print(f"${sum(Price_item)}")
+print(f"GST=${sum(Price_item)*float(0.1).__round__(2)}")
+print(f"With GST=${round(sum(Price_item)*float(1.1),2)}")
+if dining == "T":
+    print(f"Surcharge =${round(sum(Price_item)*float(0.05),2)}")
+else:
+    print("Surcharge = $0.00")
